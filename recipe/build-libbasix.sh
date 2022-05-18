@@ -1,6 +1,8 @@
 #!/bin/bash
 cd cpp
 
+export CMAKE_BUILD_PARALLEL_LEVEL=${CPU_COUNT}
+
 # explicitly link cblas, since FindBLAS doesn't cover it,
 # but it's needed when building against netlib
 cmake \
